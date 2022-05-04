@@ -1,0 +1,75 @@
+*{
+  font-family:Arial, Helvetica, sans-serif;
+}
+.main-div{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+hr{
+  width: 98%;
+  margin-left: 1%;
+}
+#myName{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 ; /* Gives that scrolling effect as the typing happens */
+  /*letter-spacing: .1em;  Adjust as needed */
+  animation: 
+    blink-caret .75s step-end,
+    typing 2.5s steps(40, end) forwards;
+}
+ @keyframes typing {
+  0% { width: 0% }
+  99%{ border-color: orange;}
+  100% { width: 100%; border-color: transparent;}
+}
+@keyframes blink-caret {
+  from{}
+  to { border-color: transparent }
+  50% { border-color: orange; }
+}
+progress{
+  -webkit-appearance:none;
+}
+::-webkit-progress-bar{
+  background-color: aliceblue;
+}
+::-webkit-progress-value{
+  border-radius: 4px;
+}
+#csP::-webkit-progress-value{
+  background-color: #8a2be2;
+}
+#javaP::-webkit-progress-value{
+  background-color:rgb(147, 214, 3);
+}
+#htmlP::-webkit-progress-value{
+  background-color: rgb(255, 100, 83);
+}
+#jstsP::-webkit-progress-value{
+  background-color: rgb(245, 245, 1);
+}
+#cssP::-webkit-progress-value{
+  background-color:rgb(0, 143, 225);
+}
+#sqlP::-webkit-progress-value{
+  background-color:rgb(145, 180, 180);
+}
+#netP::-webkit-progress-value{
+  background-color: rgb(139, 0, 139);
+}
+#ngP::-webkit-progress-value{
+  background-color: rgb(218, 20, 56);
+}
+#vanillaP::-webkit-progress-value{
+  background-color: rgb(250, 250, 10);
+}
+#asP::-webkit-progress-value{
+  background-color:rgb(150, 220, 0);
+}
+#efwP::-webkit-progress-value{
+  background-color: rgb(180, 10, 180);
+}
+#nodejsP::-webkit-progress-value{
+  background-color:rgb(85, 180, 47);
+}

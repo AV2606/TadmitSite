@@ -1,1 +1,123 @@
-<p>main works!</p>
+<div class="main-div">
+<h2 id="myName" >
+    {{Strings.first_name}} {{Strings.last_name}}
+</h2>
+<br>
+
+<p [innerHTML]="Strings.shortDesc">
+</p>
+
+<div>
+    Experience level in different languages:
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    C#
+                </td>
+                <td>
+                    <progress id="csP" max="100" value="95"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Java
+                </td>
+                <td>
+                    <progress id="javaP" max="100" value="90"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    HTML
+                </td>
+                <td>
+                    <progress id="htmlP" max="100" value="85"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    JS & TS
+                </td>
+                <td>
+                    <progress id="jstsP" max="100" value="80"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    CSS
+                </td>
+                <td>
+                    <progress id="cssP" max="100" value="60"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    SQL
+                </td>
+                <td>
+                    <progress id="sqlP" max="100" value="50"></progress>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div>
+    Experience level in different frameworks:
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="assets/icons/net.png" height="20px">.NET &nbsp;
+                </td>
+                <td>
+                    <progress id="netP" value="95" max="100"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/icons/angular.png" height="20px">ngular &nbsp;
+                </td>
+                <td>
+                    <progress id="ngP" value="85" max="100"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/icons/js.webp" height="20px">Vanilla WD &nbsp;
+                </td>
+                <td>
+                    <progress id="vanillaP" value="85" max="100"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/icons/adroid_studio.png" height="20px">Android&nbsp;
+                </td>
+                <td>
+                    <progress id="asP" value="75" max="100"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/icons/entityfw.png" height="20px">Entity FW &nbsp;
+                </td>
+                <td>
+                    <progress id="efwP" value="70" max="100"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/icons/nodejs.png" height="20px"> &nbsp;
+                </td>
+                <td>
+                    <progress id="nodejsP" value="20" max="100"></progress>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

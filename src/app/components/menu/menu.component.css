@@ -3,6 +3,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    position: relative;
 }
 .current{
     text-decoration: underline;
