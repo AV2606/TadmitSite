@@ -1,0 +1,6 @@
+*{
+    background-image:url("https://cdn.pixabay.com/photo/2017/09/07/17/27/background-2726039_1280.png");
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}

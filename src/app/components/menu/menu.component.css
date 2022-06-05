@@ -17,4 +17,6 @@ nav {
 }
 #made-with{
     margin-left: auto;
+    font-size: small;
+    -webkit-text-stroke:01px grey;
 }
