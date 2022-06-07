@@ -12,6 +12,10 @@ import { MenuComponent } from './components/menu/menu.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SocialsComponent } from './components/socials/socials.component';
+
+
+
 
 const paths=[
   {path:'',component:MainComponent},
@@ -27,7 +31,8 @@ const paths=[
     MenuComponent,
     AboutComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    SocialsComponent  
   ],
   imports: [
     BrowserModule,

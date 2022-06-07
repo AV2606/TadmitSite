@@ -1,0 +1,41 @@
+#all{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+}
+#socialFind:hover #arrow{
+    position: absolute;
+    animation: arrow-anim 1s infinite;
+}
+@keyframes arrow-anim{
+    0%{
+        transform: rotateX(0deg) ;
+    }
+    25%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform:rotateX(0deg) translateX(200%);
+    }
+    75%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform:  rotateX(0deg);
+    }
+}
+#socialFind{
+    font-family: 'oswald', sans-serif;
+    font-size: 2em;
+    color: #fff;
+    height: 1.6em;
+    -webkit-text-stroke: 1px #000;
+    background: rgba(100, 100, 100, 0.2);
+    border-radius: 0.5em;
+}
+#container{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}

@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-o":"ng serve -o",
     "build": "ng build",
     "build-prod": "ng build --output-path docs/ --base-href /TadmitSite/",
     "watch": "ng build --watch --configuration development",

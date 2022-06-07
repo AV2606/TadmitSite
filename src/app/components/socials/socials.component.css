@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+.block-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    /* background-color: #434150; */
+}
+.socials-list{
+    position: relative;
+    transform: skewY(-15deg);
+}
+.social-wrapper{
+    /* transition: 0.5s; */
+}
+.socials-list .social-wrapper{
+    position: relative;
+    list-style: none;
+    width: 120px;
+    background: #3e3f46;
+    padding: 15px;
+    transition: 0.5s;
+    z-index: calc(1*var(--i));
+}
+.socials-list .social-wrapper:hover{
+    transform: translateX(-50px);
+    background: var(--clr);
+}
+.socials-list .social-wrapper::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background:#3e3f46;   
+    filter: brightness(0.7);
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 00.5s;
+}
+
+.socials-list .social-wrapper:hover::before{
+    background:var(--clr);   
+    filter: brightness(0.7);
+}
+.socials-list .social-wrapper::after{
+    content: '';
+    position: absolute;
+    top: -39px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background:#3e3f46;   
+    filter: brightness(0.9);
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+.socials-list .social-wrapper:hover::after{
+    background:var(--clr);   
+    filter: brightness(0.9);
+}
+.socials-list .social-wrapper a{
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.socials-list .social-wrapper a:hover{
+    color: #fff;
+}
+.socials-list .social-wrapper:last-child::after{
+    /* box-shadow: -120px 120px 30px rgba(0,0,0); */
+    /* z-index: -100; */
+}
+.socials-list .social-wrapper .logo-container{
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    font-size: 1.25em;
+}
+.socials-list .social-wrapper:hover .logo-container{
+    /* background:var(--clr);    */
+    /* filter: brightness(0.7); */
+    opacity: 1;
+}
