@@ -12,15 +12,15 @@
     <br>
     <table>
         <tbody>
-            <tr>
-                <img id='cspng' src="assets/icons/csharp.png" height="50px" style="opacity: 0;">
-                <img id='javapng' src="assets/icons/java.png" height="50px" style="opacity: 0;">
-                <img id='htmlpng' src="assets/icons/html.ico" height="50px" style="opacity: 0;">
-                <img id='jspng' src="assets/icons/js.webp" height="50px" style="opacity: 0;">
-                <img id='csspng' src="assets/icons/css.ico" height="50px" style="opacity: 0;">
-                <img id='tspng' src="assets/icons/ts.png" height="50px" style="opacity: 0;">
+            <tr class="pics-container">
+                <img (mouseenter)="onPicHover('cspng')" id='cspng' src="assets/icons/csharp.png" height="50px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('javapng')" id='javapng' src="assets/icons/java.png" height="50px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('htmlpng')" id='htmlpng' src="assets/icons/html.ico" height="50px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('jspng')" id='jspng' src="assets/icons/js.webp" height="50px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('csspng')" id='csspng' src="assets/icons/css.ico" height="50px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('tspng')" id='tspng' src="assets/icons/ts.png" height="50px" style="opacity: 0;">
                 <!-- <img id='sqlpng' src="assets/icons/sql.png" width="150px" style="opacity: 100;">   &nbsp; -->
-                <img id='sqlpng' src="https://www.svgrepo.com/show/331761/sql-database-sql-azure.svg" width="50px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('sqlpng')" id='sqlpng' src="https://www.svgrepo.com/show/331761/sql-database-sql-azure.svg" width="50px" style="opacity: 0;">
             </tr>
         </tbody>
     </table>
@@ -31,16 +31,25 @@
     <br>
     <table>
         <tbody>
-            <tr>
-                <img id='netpng' src="assets/icons/net.png" height="45" style="opacity: 0;">
-                <img id='angularpng' src="assets/icons/angular.png" height="45px" style="opacity: 0;">
-                <img id='nodepng' src="assets/icons/nodejs.png" height="45px" style="opacity: 0;">
-                <img id='entitypng' src="assets/icons/entityfw.png" height="45px" style="opacity: 0;">
-                <img id='vanillapng' src="assets/icons/vanilla.png" height="45px" style="opacity: 0;">
-                <img id='androidstudiopng' src="assets/icons/adroid_studio.png" height="45px" style="opacity: 0;">
-                <img id='asppng' src="assets/icons/asp.png" height="45px" style="opacity: 0;">
+            <tr class="pics-container">
+                <img (mouseenter)="onPicHover('netpng')" id='netpng' src="assets/icons/net.png" height="45" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('angularpng')" id='angularpng' src="assets/icons/angular.png" height="45px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('nodepng')" id='nodepng' src="assets/icons/nodejs.png" height="45px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('entitypng')" id='entitypng' src="assets/icons/entityfw.png" height="45px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('vanillapng')" id='vanillapng' src="assets/icons/vanilla.png" height="45px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('androidstudiopng')" id='androidstudiopng' src="assets/icons/adroid_studio.png" height="45px" style="opacity: 0;">
+                <img (mouseenter)="onPicHover('asppng')" id='asppng' src="assets/icons/asp.png" height="45px" style="opacity: 0;">
             </tr>
         </tbody>
     </table>
 </div>
 </div>
+<div class="detail-div">
+    <div id="langsDesc">
+    </div>
+    <hr [hidden]="!showDetail" style="color:#9affff">
+    <div id="nameDropping">
+    </div>
+</div>
+
+    
