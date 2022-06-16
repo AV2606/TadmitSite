@@ -1,6 +1,7 @@
 nav {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.2);
     display: flex;
+    /* grid-template-columns: repeat(5, 1fr); */
     flex-direction: row;
     align-items: baseline;
     position: relative;
@@ -9,8 +10,15 @@ nav {
     text-decoration: underline;
     text-underline-offset: 10px;
 }
+@media screen and (max-width: 459px) {
+   #made-with{
+    width: min-content;
+   }
+}
 .nav-item{
-    margin: 5px;
+    margin: 0.1em;
+    font-size: 1em;
+    flex-shrink: 1;
 }
 .nav-btn:hover{
     background-color: aliceblue;

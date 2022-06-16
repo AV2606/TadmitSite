@@ -4,13 +4,3 @@
     position: relative;
     min-height: 100vh;
 }
-.testDiv{
-    background-color: black;
-    background-image: none;
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 1Spx;
-    /* height: 1vh; */
-    transform: translateY(-99vh);
-}
