@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpContext } from '@angular/common/http';
 
 export interface IContact{
     formProperties:IFormProperties,
@@ -164,12 +164,14 @@ export class ContactRequest implements IContact{
         let r=null;
         await client.post(url,this,{
             headers:{
-            // 'Content-Type':'application/json',
+            'Content-Type':'application/json',
             'Authorization':'HuYd15ugsn-JdZX0_C_bF-WcHjj4FrghHLCTOggghYA.eyJpbnN0YW5jZUlkIjoiOGZmMmQ5ZjktZDdlNy00NjY3LWE4MTUtYTg4NzVkZDhkYjYwIiwiYXBwRGVmSWQiOiIxNGNlMTIxNC1iMjc4LWE3ZTQtMTM3My0wMGNlYmQxYmVmN2MiLCJtZXRhU2l0ZUlkIjoiMDdkNTY3NWQtNDk4ZC00YTUwLTliZjctOGVkM2UwOTI0MzNlIiwic2lnbkRhdGUiOiIyMDIyLTA2LTE3VDE0OjUyOjI0LjQwOVoiLCJ1aWQiOiI2MGYwMTVlNi1hNTczLTRiMzYtODZkZi0zMDYxZDIxMzZjNmEiLCJwZXJtaXNzaW9ucyI6Ik9XTkVSIiwiZGVtb01vZGUiOmZhbHNlLCJiaVRva2VuIjoiODgyN2JlYTQtOWU2YS0wYzM3LTMzZTItMjY1NGJkNGE5ODVlIiwic2l0ZU93bmVySWQiOiI2MGYwMTVlNi1hNTczLTRiMzYtODZkZi0zMDYxZDIxMzZjNmEiLCJzaXRlTWVtYmVySWQiOiI2MGYwMTVlNi1hNTczLTRiMzYtODZkZi0zMDYxZDIxMzZjNmEiLCJleHBpcmF0aW9uRGF0ZSI6IjIwMjItMDYtMTdUMTg6NTI6MjQuNDA5WiIsImxvZ2luQWNjb3VudElkIjoiNjBmMDE1ZTYtYTU3My00YjM2LTg2ZGYtMzA2MWQyMTM2YzZhIn0',
             // 'DNT':'1',
             // 'Referer':'https://editor.wix.com/',
             'X-Wix-Client-Artifact-Id':'wix-form-builder'
-            }
+            },
+            withCredentials:true
+
         }).subscribe((res)=>{
          r=res
         }

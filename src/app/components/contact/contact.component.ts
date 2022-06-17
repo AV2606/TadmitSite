@@ -45,16 +45,16 @@ export class ContactComponent implements OnInit {
   }
   async sendContact(){
     console.log("contacting");
-    let req=ContactRequest.GenerateContactRequest();
-    req.AddAddressField("Test");
-    req.AddEmailField("Test12@mail.com");
-    req.AddFirstNameField("Test name");
-    req.AddMessageField("Test message");
-    req.AddPhoneField("Test phone");
-    req.AddSubjectField("Test subject");
-    let result=await req.Send(this.httpClient);
-    console.log(result);
-    alert(result);
+    //let req=ContactRequest.GenerateContactRequest();
+    //req.AddAddressField("Test");
+    //req.AddEmailField("Test12@mail.com");
+    //req.AddFirstNameField("Test name");
+    //req.AddMessageField("Test message");
+    //req.AddPhoneField("Test phone");
+    //req.AddSubjectField("Test subject");
+    //let result=await req.Send(this.httpClient);
+    //console.log(result);
+    //alert(result);
   }
 
 }
