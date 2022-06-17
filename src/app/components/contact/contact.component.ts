@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ContactRequest } from 'src/app/classes/ContactRequest';
 
 @Component({
   selector: 'app-contact',
@@ -25,7 +27,7 @@ export class ContactComponent implements OnInit {
   prefix='assets/icons/';
   img=this.prefix+this.imgs.net;
 
-  constructor() { }
+  constructor(private httpClient:HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -40,6 +42,19 @@ export class ContactComponent implements OnInit {
       }
       inner++
     }
+  }
+  async sendContact(){
+    console.log("contacting");
+    let req=ContactRequest.GenerateContactRequest();
+    req.AddAddressField("Test");
+    req.AddEmailField("Test12@mail.com");
+    req.AddFirstNameField("Test name");
+    req.AddMessageField("Test message");
+    req.AddPhoneField("Test phone");
+    req.AddSubjectField("Test subject");
+    let result=await req.Send(this.httpClient);
+    console.log(result);
+    alert(result);
   }
 
 }
