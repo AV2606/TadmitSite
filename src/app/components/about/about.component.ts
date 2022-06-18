@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Strings } from 'src/app/classes/strings';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  strings=Strings;
+  about=getAboutAsArray();
+
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
   }
 
 }
+function getAboutAsArray() {
+  let r=[];
+  let s=Strings as any;
+  for(let chapter in s.about){
+    r.push(s.about[chapter]);
+  }
+  return r;
+}
+

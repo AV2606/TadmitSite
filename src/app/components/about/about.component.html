@@ -1,1 +1,9 @@
-<p>about works!</p>
+<ul class="about-container">
+    <li *ngFor="let chapter of about" class="chapter-about">
+        <h3 class="chapter-title">{{chapter.title}}</h3>
+        <ul class="chapter-contents">
+            <li *ngFor="let par of chapter.content" class="chapter-par">{{par}}<br></li>
+        </ul>
+        <br>
+    </li>
+</ul>
