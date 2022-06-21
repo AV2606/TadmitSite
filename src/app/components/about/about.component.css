@@ -1,0 +1,6 @@
+.chapter-par{
+    text-shadow: -1px -1px 0 aliceblue, 1px -1px 0 whitesmoke, -1px 1px 0 wheat, 1px 1px 0 #fff;
+}
+.chapter-title{
+    text-shadow: 0 0 0.2em aliceblue;
+}

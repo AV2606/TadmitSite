@@ -1,1 +1,28 @@
-<p>projects works!</p>
+<ul class="projects">
+    <li class="project" *ngFor="let proj of strings.projects">
+        <h3 class="title">
+            {{proj.title}}
+        </h3>
+        <div class="proj-container">
+            <section class="left-img">
+                <a href="#">
+                <img src="{{proj.imagesUrls[0]}}" alt="{{proj.title}}">
+                </a>
+            </section>
+            <section class="right-desc">
+                <div class="shortDesc">
+                {{proj.shortDescription}}
+                </div>
+                <hr class="desc-points">
+                <div class="points-container">
+                    <ul class="points">
+                        <li *ngFor="let point of proj.points">
+                            {{point}}
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <hr>
+    </li>
+</ul>

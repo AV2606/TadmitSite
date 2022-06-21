@@ -1,0 +1,31 @@
+section > a > img{
+    width: 33vw;
+    margin-right: 2vw ;
+    transition: 0.3s;
+}
+section > a > img:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 5px #000;
+}
+
+.right-desc{
+    /* -webkit-text-stroke: 0.02em white;  */
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.proj-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 1vw;
+}
+
+.desc-points{
+    width: 95%;
+    color: white;
+    height: 0.08em;
+}
+
+li > hr{
+    width: 95%;
+}

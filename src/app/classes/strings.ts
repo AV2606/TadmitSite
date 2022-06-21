@@ -14,6 +14,16 @@ export interface IChapter{
     title:string;
     content:string[];
 }
+export interface IProject{
+    title:string;
+    shortDescription:string;
+    points:string[];
+    imagesUrls:string[];
+    //All lines of the long description
+    longDescription:string[];
+    sourceLink:string;
+    pageLink:string;
+}
 export class Strings{
 
     //should be used later to change language.
@@ -112,4 +122,29 @@ export class Strings{
             "All of its code is open source, and you can find it on my github account: https://github.com/AV2606/TadmitSite"]
         }
     }
+    static readonly projects:IProject[]=[
+        {
+            title:'Tadmit',
+            shortDescription:'This website is a personal project that I have created to get further experince.',
+            points:['Angular','Web','type script'],
+            imagesUrls:['assets/projects/tadmit.png'],
+            longDescription:['This website has a lot of effort built into it.',
+            'It is open source and you can see all of its source code in the link provided below.',
+            'Hope you enjoy it, if you want to see more of my work, or want to contribute feel free to visit my github account.'],
+            sourceLink:'https://github.com/AV2606/TadmitSite',
+            pageLink:'#'
+        },
+        {
+            title:'Credit Company',
+            shortDescription:'An application that simluates a credit company by all its needs, from user interface to backend and client managment.',
+            points:['C#','WinForms','SQL','Entity Framework'],
+            imagesUrls:['assets/projects/tadmit.png'],
+            longDescription:['As part of my HackerU course, I have created a credit company application using the .Net framework',
+            'The application has a lot of features, and it is a good example of how to use the framework.',
+            'The application is open source, and you can see all of its source code in the link provided below.',
+            'Hope you enjoy it, if you want to see more of my work, or want to contribute feel free to visit my github account.'],
+            sourceLink:'https://github.com/AV2606/CreditCompany',
+            pageLink:'#'
+        }
+    ];
 }
