@@ -5,8 +5,16 @@
         </h3>
         <div class="proj-container">
             <section class="left-img">
-                <a href="#">
-                <img src="{{proj.imagesUrls[0]}}" alt="{{proj.title}}">
+                <a href="/projects/{{proj.title}}">
+                    <div class="image-container">
+                        <img src="{{proj.imagesUrls[0]}}" alt="{{proj.title}}">
+                        <a target="_blank" class="github-slider" href="{{proj.sourceLink}}">
+                            <span class="text">
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" height="25px">
+                                Go to github
+                            </span>
+                        </a>
+                    </div>
                 </a>
             </section>
             <section class="right-desc">

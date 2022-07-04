@@ -1,16 +1,57 @@
-section > a > img{
+.image-container > img{
     width: 33vw;
-    margin-right: 2vw ;
+    margin-right: 0vw ;
     transition: 0.3s;
+    /* transform: scale(1.1); */
 }
-section > a > img:hover{
+.image-container:hover{
     transform: scale(1.1);
     box-shadow: 1px 1px 5px #000;
+}
+
+.image-container{
+    
+    margin-right: 0px;
+}
+
+.github-slider{
+    display: flex;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(45,253,59,0) 100%);;
+    width: 100%;
+    height: 72px;
+    top: 72px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-decoration: underline;
+    text-decoration-color: greenyellow;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.github-slider .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: bold;
 }
 
 .right-desc{
     /* -webkit-text-stroke: 0.02em white;  */
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    margin-left: 2vw;
+}
+
+.left-img{
+    position: relative;
+}
+
+.github-slider:hover{
+    opacity: 1;
 }
 
 .proj-container{

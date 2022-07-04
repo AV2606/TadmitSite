@@ -15,6 +15,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SocialsComponent } from './components/socials/socials.component';
+import { IndividualComponent } from './components/individual/individual.component';
 
 
 
@@ -23,7 +24,8 @@ const paths=[
   {path:'',component:MainComponent},
   {path:'about',component:AboutComponent},
   {path:'projects',component:ProjectsComponent},
-  {path:'contact', component:ContactComponent}
+  {path:'contact', component:ContactComponent},
+  {path:'projects/:id',component:IndividualComponent}
 ];
 
 @NgModule({
@@ -34,7 +36,8 @@ const paths=[
     AboutComponent,
     ProjectsComponent,
     ContactComponent,
-    SocialsComponent  
+    SocialsComponent,
+    IndividualComponent  
   ],
   imports: [
     BrowserModule,
