@@ -6,7 +6,8 @@
     "start": "ng serve",
     "start-o":"ng serve -o",
     "build": "ng build",
-    "build-prod": "ng build --output-path docs/ --base-href /TadmitSite/",
+    "build-prod": "ng build --output-path docs/ --base-href /TadmitSite/ & npm run copy-index-to-404",
+    "copy-index-to-404":"xcopy .\\docs\\index.html .\\docs\\404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
