@@ -5,7 +5,7 @@
         </h3>
         <div class="proj-container">
             <section class="left-img">
-                <a href="/projects/{{proj.title}}">
+                <a [routerLink]="['/projects/{{proj.title}}']">
                     <div class="image-container">
                         <img src="{{proj.imagesUrls[0]}}" alt="{{proj.title}}">
                         <a target="_blank" class="github-slider" href="{{proj.sourceLink}}">
