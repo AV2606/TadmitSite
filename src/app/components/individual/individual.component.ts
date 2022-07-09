@@ -19,7 +19,7 @@ export class IndividualComponent implements OnInit {
   {
     this.innerText=router.url.split('/')[router.url.split('/').length-1];
     this.info=this.strings.projects.filter(x=>x.title==this.innerText)[0];
-    this.info.imagesUrls[0];
+    console.log(this.info);
   }
 
   ngOnInit(): void {

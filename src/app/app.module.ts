@@ -25,7 +25,7 @@ const paths=[
   {path:'about',component:AboutComponent},
   {path:'projects',component:ProjectsComponent},
   {path:'contact', component:ContactComponent},
-  {path:'projects/:id',component:IndividualComponent}
+  {path:'project/:id',component:IndividualComponent}
 ];
 
 @NgModule({
