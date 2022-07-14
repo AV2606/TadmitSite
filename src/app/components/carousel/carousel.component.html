@@ -1,0 +1,17 @@
+<div (loadstart)="showItem(0)" class="carousel">
+    <div *ngFor="let img of imagesUrls; let i=index ">
+        <div class="coursel-item" id="item-{{i}}">
+            
+            <img [src]="img" alt="" class="img">
+            
+        </div>
+    </div>
+    <div class="coursel-footer">
+        <button class="coursel-btn" id="button-{{i}}" (click)="showItem(i)"
+            *ngFor="let img of imagesUrls; let i = index">
+        </button>
+    </div>
+    <button id="next-btn" (click)="showItem((currentSlide+1)%sliders)">⇨</button>
+    <button id="prev-btn" (click)="showItem((currentSlide-1)%sliders)">⇦</button>
+</div>
+{{loaded()}}

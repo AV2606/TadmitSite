@@ -127,7 +127,7 @@ export class Strings{
             title:'Tadmit',
             shortDescription:'This website is a personal project that I have created to get further experince.',
             points:['Angular','Web','type script'],
-            imagesUrls:['assets/projects/tadmit.png'],
+            imagesUrls:['assets/projects/tadmit.png','assets/icons/csharp.png'],
             longDescription:['This website has a lot of effort built into it.',
             'It is open source and you can see all of its source code in the link provided below.',
             'Hope you enjoy it, if you want to see more of my work, or want to contribute feel free to visit my github account.'],
