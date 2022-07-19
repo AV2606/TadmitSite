@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ContactRequest } from 'src/app/classes/ContactRequest';
 
 @Component({
   selector: 'app-contact',
@@ -42,6 +41,15 @@ export class ContactComponent implements OnInit {
       }
       inner++
     }
+  }
+  submit(form:any){
+    let {name,email,title,content}=form.value;
+    let json={name,email,title,content,_captcha:false};
+    this.httpClient.post('https://formsubmit.co/avichay593@gmail.com',JSON.stringify(json)).subscribe(
+      (data:any)=>{
+        console.log(data);
+      },
+    );
   }
   async sendContact(){
     console.log("contacting");
