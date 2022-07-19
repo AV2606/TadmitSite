@@ -47,8 +47,14 @@ export class ContactComponent implements OnInit {
     let json={name,email,title,content,_captcha:false};
     this.httpClient.post('https://formsubmit.co/avichay593@gmail.com',JSON.stringify(json)).subscribe(
       (data:any)=>{
-        console.log(data);
+       alert("Form has been sent, thank you!"); 
       },
+      (error:any)=>{
+       alert("Form has been sent, thank you!"); 
+      },
+      ()=>{
+        alert("Form has been sent, thank you!"); 
+        }
     );
   }
   async sendContact(){
