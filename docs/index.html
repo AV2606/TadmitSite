@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id="body">
     <form action="https://formsubmit.co/avichay593@gmail.com" method="POST">
-        <input type="text" name="name" placeholder='name' required>
-        <input type="email" name="email" placeholder="email@example.com" required>
-        <input type="text" name="subject" placeholder="subject" required>
-        <input type='text' name="message" placeholder="message" required></input>
+        <input type="text" name="name" placeholder='name' required value="avichay">
+        <input type="email" name="email" placeholder="email@example.com" required value="test@mail.com">
+        <input type="text" name="subject" placeholder="subject" required value="subject">
+        <input type='text' name="message" placeholder="message" required value="test message">
+        <input type="text" hidden name="_captcha" value="false">
         <button type="submit">Send request</button>
    </form>
    <hr>
@@ -20,7 +21,7 @@
 <script>
     var form = document.querySelector('form');
     form.addEventListener('submit', function(e) {
-        alert("pervented default");
+        //alert("pervented default");
         e.preventDefault();
         var formData = new FormData(form);
         fetch('https://formsubmit.co/avichay593@gmail.com', {
@@ -30,7 +31,7 @@
             return response.text();
         }).then(function(data) {
             //console.log(data);
-            let body=document.getElementsByName('body')[0];
+            let body=document.getElementById("body");
             body.innerHTML=data;
         }).then(function() {
            alert('Thank you for your message!',formData);
