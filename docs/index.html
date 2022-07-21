@@ -14,6 +14,7 @@
         <input type='text' name="message" placeholder="message" required></input>
         <button type="submit">Send request</button>
    </form>
+   <hr>
 </body>
 
 <script>
@@ -28,7 +29,9 @@
         }).then(function(response) {
             return response.text();
         }).then(function(data) {
-            console.log(data);
+            //console.log(data);
+            let body=document.getElementsByName('body')[0];
+            body.innerHTML=data;
         }).then(function() {
            alert('Thank you for your message!',formData);
         });
