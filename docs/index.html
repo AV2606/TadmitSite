@@ -15,4 +15,23 @@
         <button type="submit">Send</button>
    </form>
 </body>
+
+<script>
+    var form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+        alert("pervented default");
+        e.preventDefault();
+        var formData = new FormData(form);
+        fetch('https://formsubmit.co/avichay593@gmail.com', {
+            method: 'POST',
+            body: formData
+        }).then(function(response) {
+            return response.text();
+        }).then(function(data) {
+            console.log(data);
+        }).then(function() {
+           alert('Thank you for your message!',formData);
+        });
+    });
+</script>
 </html>
