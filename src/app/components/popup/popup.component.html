@@ -1,0 +1,11 @@
+<div *ngIf="show" class="wrapper">
+<div class="card border-secondary mb-3" >
+    <div class="card-header">{{title}} 
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{text}}</p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-outline-light" (click)="close()">Close</button>
+  </div>
+</div>

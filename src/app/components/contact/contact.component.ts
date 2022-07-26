@@ -58,7 +58,7 @@ export class ContactComponent implements OnInit {
     // );
     let form1:any = document.getElementById('formid');
     form1.addEventListener('submit', function(e:any) {
-        alert("pervented default");
+        //alert("pervented default");
         //alert("pervented default");
         e.preventDefault();
         let formData = new FormData(form1);

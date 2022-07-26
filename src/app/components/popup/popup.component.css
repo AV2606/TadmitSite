@@ -1,0 +1,47 @@
+@keyframes pop-up 
+{
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.card {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2976540958180147) 0%, rgba(148, 187, 233, 0.5) 85%);
+    z-index: 1000;
+    width: wrap;
+    max-width: 75%;
+    transition: 0.5s linear;
+    animation: forwards pop-up 0.5s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+}
+
+.card-body{
+    background-color: rgba(255,255,255,0.7);
+}
+
+.card-header {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+}

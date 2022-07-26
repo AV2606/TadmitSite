@@ -17,6 +17,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { SocialsComponent } from './components/socials/socials.component';
 import { IndividualComponent } from './components/individual/individual.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { PopupComponent } from './components/popup/popup.component';
 
 
 
@@ -39,7 +40,8 @@ const paths=[
     ContactComponent,
     SocialsComponent,
     IndividualComponent,
-    CarouselComponent  
+    CarouselComponent,
+    PopupComponent  
   ],
   imports: [
     BrowserModule,
