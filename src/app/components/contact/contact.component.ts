@@ -45,17 +45,37 @@ export class ContactComponent implements OnInit {
   submit(form:any){
     let {name,email,title,content}=form.value;
     let json={name,email,title,content,_captcha:false};
-    this.httpClient.post('https://formsubmit.co/avichay593@gmail.com',JSON.stringify(json)).subscribe(
-      (data:any)=>{
-       alert("Form has been sent, thank you!"); 
-      },
-      (error:any)=>{
-       alert("Form has been sent, thank you!"); 
-      },
-      ()=>{
-        alert("Form has been sent, thank you!"); 
-        }
-    );
+    // this.httpClient.post('https://formsubmit.co/avichay593@gmail.com',JSON.stringify(json)).subscribe(
+    //   (data:any)=>{
+    //    alert("Form has been sent, thank you!"); 
+    //   },
+    //   (error:any)=>{
+    //    alert("Form has been sent, thank you!"); 
+    //   },
+    //   ()=>{
+    //     alert("Form has been sent, thank you!"); 
+    //     }
+    // );
+    let form1:any = document.getElementById('formid');
+    form1.addEventListener('submit', function(e:any) {
+        alert("pervented default");
+        //alert("pervented default");
+        e.preventDefault();
+        let formData = new FormData(form1);
+        fetch('https://formsubmit.co/avichay593@gmail.com', {
+            //return response.text();
+        }).then(function(data) {
+            //console.log(data);
+            //let body=document.getElementsByName('body')[0];
+            //let body=document.getElementById("body");
+            //body.innerHTML=data;
+            console.log(data);
+            
+        }).then(function() {
+           alert('Thank you for your message!');
+        });
+          }
+           );
   }
   async sendContact(){
     console.log("contacting");

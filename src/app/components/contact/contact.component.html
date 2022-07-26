@@ -1,13 +1,13 @@
 <div id="all">
     <div class="form-container">
-        <form #contactForm="ngForm" action="https://formsubmit.co/08f5ae114b0950c9cf63c54415ebc607" method='POST'>
+        <form id='formid' #contactForm="ngForm" action="https://formsubmit.co/08f5ae114b0950c9cf63c54415ebc607" method='POST'>
 
             <label>
                 Contact me!
             </label>
 
-            <div class="credentials">
-                <input type="text" name="name" id="name" placeholder="your name"
+            <!-- <div class="credentials"> -->
+                <input  type="text" name="name" id="name" placeholder="your name"
                 
                 ngModel
                 #name="ngModel"
@@ -17,7 +17,7 @@
                 ngModel
                 #email="ngModel"
                 >
-            </div>
+            <!-- </div> -->
 
             <input type="text" name="title" id="title" placeholder="Subject" 
             ngModel #title="ngModel" >

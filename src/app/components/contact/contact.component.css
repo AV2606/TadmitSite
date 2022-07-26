@@ -86,11 +86,18 @@ form{
 }
 
 input{
-    margin: .2em;
+    margin: 0.2em;
+    margin-left: 0em;
     width: 67%;
     font-family: inherit;
     border-radius: 10px;
     border: .5px solid #aaaaf0;
+}
+#email{
+    margin-left:1em;
+}
+#content{
+    margin-left:1em;
 }
 
 #submit{
