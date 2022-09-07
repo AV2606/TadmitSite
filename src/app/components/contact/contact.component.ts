@@ -7,77 +7,81 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  imgs:any={
-    chsarp:'csharp.png',
-    android_studio:'adroid_studio.png',
-    html:'html.ico',
-    angular:'angular.png',
-    css:'css.ico',
-    entityFrameWork:'entityfw.png',
-    java:'java.png',
-    js:'js.webp',
-    net:'net.png',
-    nodejs:'nodejs.png',
-    sass:'sass.png',
-    sql:'sql.png',
-    ts:'ts.png'
+  imgs: any = {
+    chsarp: 'csharp.png',
+    android_studio: 'adroid_studio.png',
+    html: 'html.ico',
+    angular: 'angular.png',
+    css: 'css.ico',
+    entityFrameWork: 'entityfw.png',
+    java: 'java.png',
+    js: 'js.webp',
+    net: 'net.png',
+    nodejs: 'nodejs.png',
+    sass: 'sass.png',
+    sql: 'sql.png',
+    ts: 'ts.png'
   }
-  counter=0;
-  prefix='assets/icons/';
-  img=this.prefix+this.imgs.net;
+  counter = 0;
+  prefix = 'assets/icons/';
+  img = this.prefix + this.imgs.net;
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
   }
-  changeSvg(){
-    let inner=0;
+  changeSvg() {
+    let inner = 0;
     for (const mem in this.imgs) {
-      if(inner%13==this.counter){
-        this.img=this.prefix+this.imgs[mem];
+      if (inner % 13 == this.counter) {
+        this.img = this.prefix + this.imgs[mem];
         this.counter++;
-        this.counter%=13;
+        this.counter %= 13;
         break;
       }
       inner++
     }
   }
-  submit(form:any){
-    let {name,email,title,content}=form.value;
-    let json={name,email,title,content,_captcha:false};
-    // this.httpClient.post('https://formsubmit.co/avichay593@gmail.com',JSON.stringify(json)).subscribe(
-    //   (data:any)=>{
-    //    alert("Form has been sent, thank you!"); 
-    //   },
-    //   (error:any)=>{
-    //    alert("Form has been sent, thank you!"); 
-    //   },
-    //   ()=>{
-    //     alert("Form has been sent, thank you!"); 
-    //     }
-    // );
-    let form1:any = document.getElementById('formid');
-    form1.addEventListener('submit', function(e:any) {
-        //alert("pervented default");
-        //alert("pervented default");
-        e.preventDefault();
-        let formData = new FormData(form1);
-        fetch('https://formsubmit.co/avichay593@gmail.com', {
-            //return response.text();
-        }).then(function(data) {
-            //console.log(data);
-            //let body=document.getElementsByName('body')[0];
-            //let body=document.getElementById("body");
-            //body.innerHTML=data;
-            console.log(data);
-            
-        }).then(function() {
-           alert('Thank you for your message!');
-        });
-          }
-           );
+  submit(form: any) {
+    let { name, email, title, content } = form.value;
+    let form1: any = document.getElementById('formid');
+    form1.addEventListener('submit', function (e: any) {
+      e.preventDefault();
+         var f = document.createElement('form');
+         f.action = 'https://formsubmit.co/08f5ae114b0950c9cf63c54415ebc607';
+         f.method = 'POST';
+         f.target = '_blank';
+
+        var i = document.createElement('input');
+        i.type = 'name';
+        i.name = 'name';
+        i.value = name;
+        f.appendChild(i);
+
+        var em = document.createElement('input');
+        em.type = 'email';
+        em.name = 'email';
+        em.value = email;
+        f.appendChild(em);
+
+        var t = document.createElement('input');
+        t.type = 'text';
+        t.name = 'title';
+        t.value = title;
+        f.appendChild(t);
+
+        var c = document.createElement('input');
+        c.type = 'text';
+        c.name = 'content';
+        c.value = content;
+        f.appendChild(c);
+
+        document.body.appendChild(f);
+         f.submit();
+     }
+    );
   }
-  async sendContact(){
+  async sendContact() {
     console.log("contacting");
     //let req=ContactRequest.GenerateContactRequest();
     //req.AddAddressField("Test");
